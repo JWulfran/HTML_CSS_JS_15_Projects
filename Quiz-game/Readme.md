@@ -11,8 +11,8 @@ L’application gère automatiquement les écrans de démarrage, de jeu et de r�
 
 ```
 
-📁 Quiz-Game/<br>
-│<br>
+📁 Quiz-Game/
+│
 ├── index.html        → Structure principale de l’application <br>
 ├── style.css         → Mise en forme et styles responsives <br>
 └── script.js         → Logique du jeu (JavaScript interactif) <br>
