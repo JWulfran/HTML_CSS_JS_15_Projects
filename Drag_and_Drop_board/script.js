@@ -13,3 +13,31 @@ for (const list of lists) {
     list.addEventListener('dragleave', dragLeave);
     list.addEventListener('drop', dragDrop);
 }
+
+function dragStart(e) {
+    e.dataTransfer.setData('text/plain', this.id);
+}
+
+function dragEnd() {
+    console.log('Drag Ended');
+}
+
+function dragOver(e) {
+    e.preventDefault();
+}
+
+function dragEnter(e) {
+    e.preventDefault();
+    this.classList.add('over');
+}
+
+function dragLeave(e) {
+    this.classList.remove('over');
+}
+
+function dragDrop(e) {
+    const id = e.dataTransfer.getData('text/plain');
+    const card = document.getElementById(id);
+    this.appendChild(card);
+    this.classList.remove('over');
+}
